@@ -99,6 +99,7 @@ class marsRoverTest {
         assertEquals(expectedStatus.getDirection(),executedCommands.getStatus().getDirection());
     }
 
+    //Tests Facing south
     @Test
     void should_Location_X_0_Location_Y_n1_Direction_N_when_execute_Command_given_Location_X_0_Location_Y_0_Direction_S_and_M() {    // -y move
         //given
