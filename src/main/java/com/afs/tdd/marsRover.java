@@ -98,4 +98,7 @@ public class marsRover {
     public String getCommands() {
         return commands;
     }
+
+    public void executeInstructions(String input) {
+    }
 }
