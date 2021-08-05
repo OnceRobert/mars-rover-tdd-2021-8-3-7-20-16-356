@@ -10,9 +10,11 @@ public class marsRover {
     
     public roverStatus executeCommands(){
         roverStatus newStatus = status;
+        String command = "";
         for (int i = 0; i<commands.length();i++) {
-            String command = "" + commands.charAt(i);
+            command = "" + commands.charAt(i);
             newStatus = executeCommand(status, command);
+            status = newStatus;
         }
         return newStatus;
     }
