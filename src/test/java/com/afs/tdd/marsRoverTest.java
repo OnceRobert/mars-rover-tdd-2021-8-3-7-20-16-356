@@ -14,7 +14,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(0,1,"N");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -29,7 +29,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(0,0,"W");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -44,7 +44,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(0,0,"E");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -61,7 +61,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(-1,0,"W");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -76,7 +76,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(0,0,"S");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -91,7 +91,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(0,0,"N");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -107,7 +107,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(0,-1,"S");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -122,7 +122,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(0,0,"E");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -137,7 +137,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(0,0,"W");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -153,7 +153,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(1,0,"E");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -168,7 +168,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(0,0,"N");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -183,7 +183,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(0,0,"S");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
@@ -198,7 +198,7 @@ class marsRoverTest {
         roverStatus expectedStatus = new roverStatus(-1,2,"N");
 
         //when
-        roverStatus executedCommands = marsrover.executeCommands();
+        roverStatus executedCommands = marsrover.executeCommands(marsrover.getStatus(), marsrover.getCommands());
 
         //then
         assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());

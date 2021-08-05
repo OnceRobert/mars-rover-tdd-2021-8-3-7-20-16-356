@@ -13,13 +13,13 @@ public class marsRover {
     }
 
 
-    public roverStatus executeCommands(){
-        roverStatus newStatus = status;
+    public roverStatus executeCommands(roverStatus status, String commands){
+        roverStatus newStatus = this.status;
         String command = "";
-        for (int i = 0; i<commands.length();i++) {
-            command = "" + commands.charAt(i);
-            newStatus = executeCommand(status, command);
-            status = newStatus;
+        for (int i = 0; i< this.commands.length(); i++) {
+            command = "" + this.commands.charAt(i);
+            newStatus = executeCommand(this.status, command);
+            this.status = newStatus;
         }
         return newStatus;
     }
@@ -101,6 +101,10 @@ public class marsRover {
     }
 
     public void executeInstructions(String input) {
-
+        String commands = parseInstructions(input);
+        roverStatus currentStatus = executeCommands(status, commands);
+        return;
     }
+
+
 }
