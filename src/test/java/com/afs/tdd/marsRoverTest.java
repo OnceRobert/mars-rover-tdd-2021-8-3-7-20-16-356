@@ -117,7 +117,7 @@ class marsRoverTest {
     @Test
     void should_Location_X_0_Location_Y_0_Direction_E_when_execute_Command_given_Location_X_0_Location_Y_0_Direction_S_and_L() {    // left turn S
         //given
-        marsRover marsrover = new marsRover(0,0,"S","R");
+        marsRover marsrover = new marsRover(0,0,"S","L");
         roverStatus expectedStatus = new roverStatus(0,0,"E");
 
         //when
