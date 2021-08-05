@@ -236,6 +236,6 @@ class marsRoverTest {
         assertEquals(expectedStatus.getX(),marsrover.getStatus().getX());
         assertEquals(expectedStatus.getY(),marsrover.getStatus().getY());
         assertEquals(expectedStatus.getDirection(),marsrover.getStatus().getDirection());
-        assertEquals(expectedStatus.getCommands(),marsrover.getStatus().getCommands());
+        assertEquals(expectedInstructions,marsrover.getCommands());
     }
 }

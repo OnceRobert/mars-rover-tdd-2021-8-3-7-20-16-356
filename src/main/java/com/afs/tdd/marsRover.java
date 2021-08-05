@@ -8,6 +8,9 @@ public class marsRover {
         this.commands = commands;
     }
 
+    public marsRover() {
+
+    }
 
 
     public roverStatus executeCommands(){
@@ -78,5 +81,21 @@ public class marsRover {
 
     public roverStatus getStatus(){
         return status;
+    }
+
+    public void parseInstructions(String input) {
+        String[] inputs = input.split("  ");
+        setStatus(inputs[0]);
+        commands = inputs[1];
+    }
+
+    public void setStatus(String input){
+        String forStatus[] = input.split(" ");
+        this.status = new roverStatus(Integer.parseInt(forStatus[0]),Integer.parseInt(forStatus[1]),forStatus[2]);
+        return;
+    }
+
+    public String getCommands() {
+        return commands;
     }
 }
