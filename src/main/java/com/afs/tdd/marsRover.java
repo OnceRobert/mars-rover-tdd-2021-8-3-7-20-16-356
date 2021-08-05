@@ -30,12 +30,24 @@ public class marsRover {
                 return status;
         }
         else if(command.equals("L")){
-            String newDirection = "W";
-            return new roverStatus(status.getX(), status.getY(), newDirection);
+            if(status.getDirection().equals("N")) {
+                String newDirection = "W";
+                return new roverStatus(status.getX(), status.getY(), newDirection);
+            } else if(status.getDirection().equals("W")) {
+                String newDirection = "S";
+                return new roverStatus(status.getX(), status.getY(), newDirection);
+            } else
+                return status;
         }
         else if(command.equals("R")){
-            String newDirection = "E";
-            return new roverStatus(status.getX(), status.getY(), newDirection);
+            if(status.getDirection().equals("N")) {
+                String newDirection = "E";
+                return new roverStatus(status.getX(), status.getY(), newDirection);
+            }else if(status.getDirection().equals("W")) {
+                String newDirection = "N";
+                return new roverStatus(status.getX(), status.getY(), newDirection);
+            }else
+                return status;
         }
         else
             return status;
