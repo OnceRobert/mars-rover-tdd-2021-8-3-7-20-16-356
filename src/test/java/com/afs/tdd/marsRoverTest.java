@@ -230,13 +230,13 @@ class marsRoverTest {
 
 
         //when
-        marsrover.parseInstructions(input);
+        String parsed = marsrover.parseInstructions(input);
 
         //then
         assertEquals(expectedStatus.getX(),marsrover.getStatus().getX());
         assertEquals(expectedStatus.getY(),marsrover.getStatus().getY());
         assertEquals(expectedStatus.getDirection(),marsrover.getStatus().getDirection());
-        assertEquals(expectedInstructions,marsrover.getCommands());
+        assertEquals(expectedInstructions,parsed);
     }
 
     @Test

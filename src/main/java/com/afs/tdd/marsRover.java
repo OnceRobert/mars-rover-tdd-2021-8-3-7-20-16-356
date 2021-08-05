@@ -83,10 +83,11 @@ public class marsRover {
         return status;
     }
 
-    public void parseInstructions(String input) {
+    public String parseInstructions(String input) {
         String[] inputs = input.split("  ");
         setStatus(inputs[0]);
         commands = inputs[1];
+        return commands;
     }
 
     public void setStatus(String input){
@@ -100,6 +101,6 @@ public class marsRover {
     }
 
     public void executeInstructions(String input) {
-        
+
     }
 }
