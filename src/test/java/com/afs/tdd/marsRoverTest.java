@@ -147,10 +147,25 @@ class marsRoverTest {
 
     //TESTS FACING EAST
     @Test
-    void should_Location_X_1_Location_Y_0_Direction_N_when_execute_Command_given_Location_X_0_Location_Y_0_Direction_E_and_M() {    // -x move
+    void should_Location_X_1_Location_Y_0_Direction_N_when_execute_Command_given_Location_X_0_Location_Y_0_Direction_E_and_M() {    // x move
         //given
         marsRover marsrover = new marsRover(0,0,"E","M");
         roverStatus expectedStatus = new roverStatus(1,0,"E");
+
+        //when
+        roverStatus executedCommands = marsrover.executeCommands();
+
+        //then
+        assertEquals(expectedStatus.getX(),executedCommands.getStatus().getX());
+        assertEquals(expectedStatus.getY(),executedCommands.getStatus().getY());
+        assertEquals(expectedStatus.getDirection(),executedCommands.getStatus().getDirection());
+    }
+
+    @Test
+    void should_Location_X_0_Location_Y_0_Direction_N_when_execute_Command_given_Location_X_0_Location_Y_0_Direction_E_and_L() {    // left turn W
+        //given
+        marsRover marsrover = new marsRover(0,0,"E","L");
+        roverStatus expectedStatus = new roverStatus(0,0,"N");
 
         //when
         roverStatus executedCommands = marsrover.executeCommands();
