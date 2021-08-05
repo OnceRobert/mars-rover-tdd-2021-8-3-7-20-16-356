@@ -33,4 +33,7 @@ public class roverStatus {
         return this.x == tester.getX() && this.y == tester.getY() && this.direction == tester.getDirection();
     }
 
+    public String generateReport() {
+        return String.format("X Position : %d Y Position : %d Direction : %s",this.x,this.y,this.direction);
+    }
 }
