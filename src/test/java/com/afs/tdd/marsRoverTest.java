@@ -102,8 +102,8 @@ class marsRoverTest {
     @Test
     void should_Location_X_0_Location_Y_n1_Direction_N_when_execute_Command_given_Location_X_0_Location_Y_0_Direction_S_and_M() {    // -y move
         //given
-        marsRover marsrover = new marsRover(0,0,"N","M");
-        roverStatus expectedStatus = new roverStatus(0,-1,"N");
+        marsRover marsrover = new marsRover(0,0,"S","M");
+        roverStatus expectedStatus = new roverStatus(0,-1,"S");
 
         //when
         roverStatus executedCommands = marsrover.executeCommands();

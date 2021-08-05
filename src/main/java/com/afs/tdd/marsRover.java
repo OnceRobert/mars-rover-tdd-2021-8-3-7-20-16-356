@@ -25,6 +25,9 @@ public class marsRover {
             }else if(status.getDirection().equals("W")){
                 int newX = status.getX() - 1;
                 return new roverStatus(newX, status.getY(), status.getDirection());
+            }else if(status.getDirection().equals("S")){
+                int newY = status.getY() - 1;
+                return new roverStatus(status.getX(),newY,status.getDirection());
             }
             else
                 return status;
