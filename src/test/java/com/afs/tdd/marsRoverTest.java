@@ -219,4 +219,23 @@ class marsRoverTest {
         assertEquals(String.format("X Position : 0 Y Position : 0 Direction : N"),report);
     }
 
+    @Test
+    void should_Location_X_0_Location_Y_0_Direction_N_Commands_MLM_when_parseInstructions_given_String_00N_MLM()
+    {
+        //given
+        marsRover marsrover = new marsRover();
+        String input = "0 0 N  MLM";
+        roverStatus expectedStatus = new roverStatus(0,0,"N");
+        String expectedInstructions = "MLM";
+
+
+        //when
+        marsrover.parseInstructions(input);
+
+        //then
+        assertEquals(expectedStatus.getX(),marsrover.getStatus().getX());
+        assertEquals(expectedStatus.getY(),marsrover.getStatus().getY());
+        assertEquals(expectedStatus.getDirection(),marsrover.getStatus().getDirection());
+        assertEquals(expectedStatus.getCommands(),marsrover.getStatus().getCommands());
+    }
 }

@@ -7,7 +7,9 @@ public class marsRover {
         status = new roverStatus(x,y,direction);
         this.commands = commands;
     }
-    
+
+
+
     public roverStatus executeCommands(){
         roverStatus newStatus = status;
         String command = "";
