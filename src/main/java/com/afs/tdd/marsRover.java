@@ -26,6 +26,10 @@ public class marsRover {
             String newDirection = "W";
             return new roverStatus(status.getX(), status.getY(), newDirection);
         }
+        else if(command.equals("R")){
+            String newDirection = "E";
+            return new roverStatus(status.getX(), status.getY(), newDirection);
+        }
         else
             return status;
     }
