@@ -245,7 +245,7 @@ class marsRoverTest {
         //given
         marsRover marsrover = new marsRover();
         String input = "0 0 N  MLM";
-        roverStatus expectedStatus = new roverStatus(0,0,"N");
+        roverStatus expectedStatus = new roverStatus(-1,1,"W");
         String expectedInstructions = "MLM";
 
 
