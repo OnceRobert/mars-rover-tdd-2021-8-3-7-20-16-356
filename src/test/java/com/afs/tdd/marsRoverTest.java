@@ -205,5 +205,18 @@ class marsRoverTest {
         assertEquals(expectedStatus.getY(),executedCommands.getStatus().getY());
         assertEquals(expectedStatus.getDirection(),executedCommands.getStatus().getDirection());
     }
+    
+    @Test
+    void should_Location_X_0_Location_Y_0_Direction_N_when_build_report_given_Location_X_0_Location_Y_0_Direction_N()
+    {
+        //given
+        roverStatus status = new roverStatus(0,0,"N");
+        //roverStatus expectedStatus = new roverStatus(0,0,"N");
+        //when
+        String report = status.generateReport();
+
+        //then
+        assertEquals(String.format("X Position : 0 Y Position : 0 Direction : N"),report);
+    }
 
 }
